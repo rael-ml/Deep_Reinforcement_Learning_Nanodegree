@@ -17,6 +17,9 @@ The state space is represented by 37 dimensions, which include the agent's veloc
 The task is episodic. To successfully solve the challenge, the agent must achieve an average score of +13 across 100 consecutive episodes.
 
 ## Getting Started
-The README describes the the project environment details (i.e., the state and action spaces, and when the environment is considered solved).
+
+
+
+
 ## Instructions
-The README describes how to run the code in the repository, to train the agent. For additional resources on creating READMEs or using Markdown, 
+To run the code, please go to the Navigation.ipynb file ans first run the 
