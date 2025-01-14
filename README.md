@@ -5,6 +5,7 @@ In this project, the task is to train an agent to navigate and gather bananas wi
 The virtual environment consists of an animated scene featuring scattered yellow and blue objects resembling bananas. The agent earns a reward of +1 for collecting a yellow banana and a penalty of -1 for picking up a blue banana. Therefore, the agent's objective is to maximize its collection of yellow bananas while steering clear of the blue ones
 
 An example of the environment is show below:
+
 ![Ambiente](https://video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
 
 The state space is represented by 37 dimensions, which include the agent's velocity and ray-based sensory input that detects objects in the agent's forward view. Using this data, the agent must learn to make the best decisions. There are four discrete actions available:
