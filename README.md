@@ -36,3 +36,7 @@ Then, place the file in the project folder, and unzip (or decompress) the file.
 The code is avalable in the Navigation.ipyng notebook. First you need to run the following line:
 
 <pre> python  !pip -q install . </pre
+
+This line of code will call "setup.py" and install the python librarys in requirements.txt
+
+After this step, please restart the kernel to run the rest of the code.
