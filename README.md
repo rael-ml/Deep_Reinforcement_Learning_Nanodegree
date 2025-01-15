@@ -16,6 +16,16 @@ The state space is represented by 37 dimensions, which include the agent's veloc
 
 The task is episodic. To successfully solve the challenge, the agent must achieve an average score of +13 across 100 consecutive episodes.
 
+##  Files
+
+- **Navigation.ipynb:** Jupyter Notebook with the DQN Agent that explores the Banana environment.
+- **README.md:** File explaining how to navigate through this project.
+- **checkpoint.pth:** Saved weights of the DQN Network that can solve the environment.
+- **requirements.txt:** The python libraries and the corresponding versions that are needed to run the project.
+- **setup.py:** A python file that sets up the installation for the Unity Machine Learning Agents library, specifying its dependencies, metadata, and description for easy installation and usage.
+- **Report.pdf:** A report file that contains a description of the learning algorithm, hiperparameters used and ideas for future works. 
+
+
 ## Getting Started
 To run the code, first you need to download the Banana environment available in the links below:
 For this project, you will not need to install Unity - this is because we have already built the environment for you, and you can download it from one of the links below. You need only select the environment that matches your operating system:
