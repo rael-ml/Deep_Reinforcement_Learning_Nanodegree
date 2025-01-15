@@ -1,52 +1,49 @@
-# DQN Application with Unity ML Agents for the Udacity's Deep Reinforcement Learning Nanodegree
-## Project Details
-In this project, the task is to train an agent to navigate and gather bananas within a large square environment (Banana.x86_64 from Unity ML-Agents).
+# DQN Application with Unity ML-Agents for Udacity's Deep Reinforcement Learning Nanodegree
 
-The virtual environment consists of an animated scene featuring scattered yellow and blue objects resembling bananas. The agent earns a reward of +1 for collecting a yellow banana and a penalty of -1 for picking up a blue banana. Therefore, the agent's objective is to maximize its collection of yellow bananas while steering clear of the blue ones
+## Project Overview
+In this project, the goal is to train an agent using Deep Q-Networks (DQN) to navigate a 3D environment and gather bananas. The environment, provided by Unity ML-Agents, features a grid where the agent can collect yellow bananas for a reward and blue bananas for a penalty. The agent’s objective is to maximize the collection of yellow bananas while avoiding blue ones.
 
-An example of the environment is shown below:
+A sample of the environment can be seen below:
 
-![Ambiente](https://video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
+![Banana Environment](https://video.udacity-data.com/topher/2018/June/5b1ab4b0_banana/banana.gif)
 
-The state space is represented by 37 dimensions, which include the agent's velocity and ray-based sensory input that detects objects in the agent's forward view. Using this data, the agent must learn to make the best decisions. There are four discrete actions available:
-0: Move forward
-1: Move backward
-2: Turn left
-3: Turn 
+## Problem Description
+The agent interacts with a virtual environment, where the state space consists of 37 dimensions, including the agent's velocity and sensor inputs from ray-based vision. The agent must make decisions based on these observations. The action space consists of four discrete actions:
 
-The task is episodic. To successfully solve the challenge, the agent must achieve an average score of +13 across 100 consecutive episodes.
+- 0: Move forward
+- 1: Move backward
+- 2: Turn left
+- 3: Turn right
 
-##  Files
+The agent is rewarded with +1 for collecting yellow bananas and penalized with -1 for picking up blue bananas. The task is episodic, and the agent must achieve an average score of +13 over 100 consecutive episodes to successfully solve the environment.
 
-- **Navigation.ipynb:** Jupyter Notebook with the DQN Agent that explores the Banana environment.
-- **README.md:** File explaining how to navigate through this project.
-- **checkpoint.pth:** Saved weights of the DQN Network that can solve the environment.
-- **requirements.txt:** The python libraries and the corresponding versions that are needed to run the project.
-- **setup.py:** A python file that sets up the installation for the Unity Machine Learning Agents library, specifying its dependencies, metadata, and description for easy installation and usage.
-- **Report.pdf:** A report file that contains a description of the learning algorithm, hiperparameters used and ideas for future works. 
-
+## Files Included
+- **Navigation.ipynb**: Jupyter Notebook containing the implementation of the DQN agent for the Banana environment.
+- **README.md**: file with details about the project and setup instructions.
+- **checkpoint.pth**: Saved weights of the trained DQN network that can solve the environment.
+- **requirements.txt**: Python dependencies required to run the project.
+- **setup.py**: Script for installing the Unity Machine Learning Agents library and related dependencies.
+- **Report.pdf**: A detailed report on the learning algorithm, hyperparameters, and ideas for future improvements.
 
 ## Getting Started
-To run the code, first you need to download the Banana environment available in the links below:
-For this project, you will not need to install Unity - this is because we have already built the environment for you, and you can download it from one of the links below. You need only select the environment that matches your operating system:
 
-Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip).
+To run the code, you'll need to download the Banana environment from one of the following links based on your operating system:
 
-Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip).
+- **Linux**: [Download Link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
+- **Mac OSX**: [Download Link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
+- **Windows (32-bit)**: [Download Link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
+- **Windows (64-bit)**: [Download Link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
 
-Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip).
+Once downloaded, unzip the file and place it in the project folder.
 
-Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip).
+## Installation Instructions
 
-Then, place the file in the project folder, and unzip (or decompress) the file.
-
-
-
-## Instructions
-The code is avalable in the Navigation.ipyng notebook. First you need to run the following line:
+1. First, install the necessary dependencies by running the following command:
 
 <pre> python  !pip -q install . </pre>
 
-This line of code will call "setup.py" and install the python librarys in requirements.txt
+2. This will trigger the setup.py script and install the required Python libraries listed in requirements.txt.
 
-After this step, please restart the kernel to run the rest of the code.
+3. After installation, restart the kernel in your Jupyter Notebook environment.
+
+4. Open Navigation.ipynb to begin running the DQN agent on the Banana environment.
