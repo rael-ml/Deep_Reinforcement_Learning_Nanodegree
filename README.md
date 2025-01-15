@@ -35,4 +35,4 @@ Then, place the file in the project folder, and unzip (or decompress) the file.
 ## Instructions
 The code is avalable in the Navigation.ipyng notebook. First you need to run the following line:
 
-<pre> ```python  !pip -q install . ``` </pre
+<pre> python  !pip -q install . </pre
