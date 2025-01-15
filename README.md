@@ -21,12 +21,18 @@ To run the code, first you need to download the Banana environment available in 
 For this project, you will not need to install Unity - this is because we have already built the environment for you, and you can download it from one of the links below. You need only select the environment that matches your operating system:
 
 Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip).
+
 Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip).
+
 Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip).
+
 Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip).
-Then, place the file in the p1_navigation/ folder in the course GitHub repository, and unzip (or decompress) the file.
+
+Then, place the file in the project folder, and unzip (or decompress) the file.
 
 
 
 ## Instructions
-To run the code, please go to the Navigation.ipynb file ans first run the 
+The code is avalable in the Navigation.ipyng notebook. First you need to run the following line:
+
+<pre> ```python  !pip -q install . ``` </pre
