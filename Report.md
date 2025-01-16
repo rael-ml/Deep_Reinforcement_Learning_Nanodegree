@@ -63,51 +63,32 @@ To prevent the network from overfitting to sequential patterns in the data, tran
 - Transitions are stored in the buffer.
 - During training, random samples from the buffer are used, promoting diversity in the training data and improving efficiency.
 
----
-
-## Pseudocode for DQN
+A code for the DQN with Replay Buffer is show below [Source](https://arxiv.org/abs/1312.5602).
 
 ```plaintext
+Initialize replay memory D to capacity N
+Initialize action-value function Q with random weights
+
 For episode = 1, M do
-    Initialize replay buffer B
-    Initialize state s₁ and preprocess ϕ₁ = ϕ(s₁)
+    Initialize sequence s₁ = {x₁} and preprocessed sequence ϕ₁ = ϕ(s₁)
 
     For t = 1, T do
-        With probability ε select a random action aₜ
-        Otherwise select aₜ = argmaxₐ Q(ϕ(sₜ), a; θ)
+        With probability ε, select a random action aₜ
+        Otherwise, select aₜ = argmaxₐ Q(ϕ(sₜ), a; θ)
 
-        Execute action aₜ in environment
-        Observe reward rₜ and next state sₜ₊₁
-        Preprocess next state: ϕₜ₊₁ = ϕ(sₜ₊₁)
+        Execute action aₜ in emulator and observe reward rₜ and image xₜ₊₁
+        Set sₜ₊₁ = sₜ, aₜ, xₜ₊₁ and preprocess ϕₜ₊₁ = ϕ(sₜ₊₁)
+        Store transition (ϕₜ, aₜ, rₜ, ϕₜ₊₁) in D
 
-        Store transition (ϕₜ, aₜ, rₜ, ϕₜ₊₁) in B
-        Sample random minibatch of transitions (ϕᵢ, aᵢ, rᵢ, ϕᵢ₊₁) from B
+        Sample random minibatch of transitions (ϕⱼ, aⱼ, rⱼ, ϕⱼ₊₁) from D
+        Set yⱼ = 
+            rⱼ                            if terminal ϕⱼ₊₁
+            rⱼ + γ maxₐ' Q(ϕⱼ₊₁, a'; θ⁻)  for non-terminal ϕⱼ₊₁
 
-        Set yᵢ =
-            rᵢ                           if terminal state
-            rᵢ + γ maxₐ' Q(ϕᵢ₊₁, a'; θ⁻) otherwise
-
-        Perform gradient descent on
-        (yᵢ - Q(ϕᵢ, aᵢ; θ))²
-        with respect to network parameters θ
-
-        Every C steps, reset θ⁻ = θ
+        Perform a gradient descent step on 
+        (yⱼ - Q(ϕⱼ, aⱼ; θ))² according to Equation 3
     End For
 End For
 ```
 
----
 
-### Key Parameters
-- `replay_buffer`: Stores past experiences to break temporal correlations.
-- `Q_network`: The main network used for action selection and training.
-- `Q_target_network`: A stable network used to compute target Q-values.
-- `epsilon`: Exploration probability in the epsilon-greedy policy.
-- `gamma`: Discount factor for future rewards.
-- `batch_size`: Number of transitions sampled from the replay buffer.
-- `target_update_frequency`: Frequency at which the target network is updated.
-
----
-
-## References
-- [Deep Q-Networks (DQN): Playing Atari with Deep Reinforcement Learning](https://arxiv.org/abs/1312.5602)
