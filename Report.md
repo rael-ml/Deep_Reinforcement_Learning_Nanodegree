@@ -67,48 +67,33 @@ To prevent the network from overfitting to sequential patterns in the data, tran
 
 ## Pseudocode for DQN
 
-```python
-# Initialize replay buffer
-replay_buffer = []
+```plaintext
+For episode = 1, M do
+    Initialize replay buffer B
+    Initialize state s₁ and preprocess ϕ₁ = ϕ(s₁)
 
-# Initialize main and target networks
-Q_network = initialize_network()
-Q_target_network = initialize_network()
-Q_target_network.load_weights(Q_network.get_weights())
+    For t = 1, T do
+        With probability ε select a random action aₜ
+        Otherwise select aₜ = argmaxₐ Q(ϕ(sₜ), a; θ)
 
-# Training loop
-for episode in range(num_episodes):
-    state = initialize_environment()
-    
-    for step in range(max_steps):
-        # Select action using epsilon-greedy policy
-        if random.random() < epsilon:
-            action = random_action()
-        else:
-            action = argmax(Q_network.predict(state))
+        Execute action aₜ in environment
+        Observe reward rₜ and next state sₜ₊₁
+        Preprocess next state: ϕₜ₊₁ = ϕ(sₜ₊₁)
 
-        # Execute action and observe reward and next state
-        next_state, reward, done = environment.step(action)
-        
-        # Store transition in replay buffer
-        replay_buffer.append((state, action, reward, next_state))
+        Store transition (ϕₜ, aₜ, rₜ, ϕₜ₊₁) in B
+        Sample random minibatch of transitions (ϕᵢ, aᵢ, rᵢ, ϕᵢ₊₁) from B
 
-        # Sample random minibatch from replay buffer
-        minibatch = random.sample(replay_buffer, batch_size)
+        Set yᵢ =
+            rᵢ                           if terminal state
+            rᵢ + γ maxₐ' Q(ϕᵢ₊₁, a'; θ⁻) otherwise
 
-        # Update Q-network
-        for s, a, r, s_next in minibatch:
-            target = r + gamma * max(Q_target_network.predict(s_next))
-            Q_network.update(s, a, target)
+        Perform gradient descent on
+        (yᵢ - Q(ϕᵢ, aᵢ; θ))²
+        with respect to network parameters θ
 
-        # Update target network periodically
-        if step % target_update_frequency == 0:
-            Q_target_network.load_weights(Q_network.get_weights())
-
-        if done:
-            break
-        
-        state = next_state
+        Every C steps, reset θ⁻ = θ
+    End For
+End For
 ```
 
 ---
