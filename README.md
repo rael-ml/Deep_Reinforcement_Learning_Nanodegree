@@ -23,7 +23,8 @@ The agent is rewarded with +1 for collecting yellow bananas and penalized with -
 - **checkpoint.pth**: Saved weights of the trained DQN network that can solve the environment.
 - **requirements.txt**: Python dependencies required to run the project.
 - **setup.py**: Script for installing the Unity Machine Learning Agents library and related dependencies.
-- **Report.pdf**: A detailed report on the learning algorithm, hyperparameters, and ideas for future improvements.
+- **Report.me**: A detailed report on the learning algorithm, hyperparameters, and ideas for future improvements.
+- **experimentplots**: Plot of the rewards of the fours experiments detailed in Report.md.
 
 ## Getting Started
 
