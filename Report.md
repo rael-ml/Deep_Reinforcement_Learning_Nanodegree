@@ -125,14 +125,14 @@ This was a very simple analysis of the hyperparameters, providing only a prelimi
 Below are the reward plots observed during training for four different experimental setups. These plots illustrate the performance improvements across episodes.
 
 #### Experiment 1
-<img src="experiment1.png" alt="Experiment 1" width="300">
+<img src="experiment1.png" alt="Experiment 1" width="400">
 
 #### Experiment 2
-<img src="experiment2.png" alt="Experiment 2" width="300">
+<img src="experiment2.png" alt="Experiment 2" width="400">
 
 #### Experiment 3
-<img src="experiment3.png" alt="Experiment 3" width="300">
+<img src="experiment3.png" alt="Experiment 3" width="400">
 
 #### Experiment 4
-<img src="experiment4.png" alt="Experiment 4" width="300">
+<img src="experiment4.png" alt="Experiment 4" width="400">
 
