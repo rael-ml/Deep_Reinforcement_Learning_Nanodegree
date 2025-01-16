@@ -1,4 +1,4 @@
-# DQN Methodology (Summary)
+# Project Report
 
 ## Q-Learning Overview
 
@@ -91,4 +91,20 @@ For episode = 1, M do
 End For
 ```
 
+## Experiments
+The table below summarizes the results of multiple training runs with different hyperparameters:
 
+| Parameter               | Experiment 1     | Experiment 2     | Experiment 3    | Experiment 4    | Experiment 5        |
+|-------------------------|-----------|-----------|-----------|-----------|---------------|
+| BUFFER_SIZE            | 100,000   | 100,000   | 100,000   | 100,000   | 100,000       |
+| BATCH_SIZE             | 64        | 64        | 128       | 64        | 64            |
+| GAMMA                  | 0.99      | 0.9       | 0.9       | 0.9       | 0.9           |
+| TAU                    | 1.00E-03  | 1.00E-03  | 1.00E-03  | 1.00E-03  | 1.00E-03      |
+| LR (Learning Rate)     | 5.00E-04  | 5.00E-04  | 5.00E-04  | 5.00E-04  | 5.00E-04      |
+| UPDATE_EVERY           | 4         | 4         | 4         | 4         | 16            |
+| eps_end                | 0.01      | 0.01      | 0.01      | 0.01      | 0.01          |
+| n_hidden_layers        | 2         | 2         | 2         | 2         | 2             |
+| fc1_units              | 256       | 256       | 256       | 128       | 128           |
+| fc2_units              | 128       | 128       | 128       | 128       | 128           |
+| Environment Solved in  | 537       | 503       | 611       | 545       | Not Solved    |
+| Average Score          | 13.04     | 13        | 13        | 13.02     | Not Solved    |
