@@ -106,5 +106,5 @@ The table below summarizes the results of multiple training runs with different 
 | n_hidden_layers        | 2         | 2         | 2         | 2         | 2             |
 | fc1_units              | 256       | 256       | 256       | 128       | 128           |
 | fc2_units              | 128       | 128       | 128       | 128       | 128           |
-| Environment Solved in  | 537       | 503       | 611       | 545       | Not Solved    |
+| N° of episodes to solve  | 537       | 503       | 611       | 545       | Not Solved    |
 | Average Score          | 13.04     | 13        | 13        | 13.02     | Not Solved    |
