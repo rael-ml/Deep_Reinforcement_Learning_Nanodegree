@@ -63,7 +63,7 @@ To prevent the network from overfitting to sequential patterns in the data, tran
 - Transitions are stored in the buffer.
 - During training, random samples from the buffer are used, promoting diversity in the training data and improving efficiency.
 
-A code for the DQN with Replay Buffer is show below [Source](https://arxiv.org/abs/1312.5602).
+A code for the DQN with Replay Buffer is show below [(Source)](https://arxiv.org/abs/1312.5602).
 
 ```plaintext
 Initialize replay memory D to capacity N
