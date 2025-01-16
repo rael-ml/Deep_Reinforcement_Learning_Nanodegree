@@ -100,7 +100,7 @@ The table below summarizes the results of multiple training runs with different 
 | BATCH_SIZE             | 64        | 64        | 128       | 64        | 64            |
 | GAMMA                  | 0.99      | 0.9       | 0.9       | 0.9       | 0.9           |
 | TAU                    | 1.00E-03  | 1.00E-03  | 1.00E-03  | 1.00E-03  | 1.00E-03      |
-| LR (Learning Rate)     | 5.00E-04  | 5.00E-04  | 5.00E-04  | 5.00E-04  | 5.00E-04      |
+| LR (Learning Rate)     | 5.00E-04  | 5.00E-04  | 5.00E-04  | 5.00E-04  | 5.00E-03      |
 | UPDATE_EVERY           | 4         | 4         | 4         | 4         | 16            |
 | eps_end                | 0.01      | 0.01      | 0.01      | 0.01      | 0.01          |
 | n_hidden_layers        | 2         | 2         | 2         | 2         | 2             |
