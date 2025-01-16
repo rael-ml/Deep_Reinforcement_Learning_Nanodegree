@@ -108,3 +108,35 @@ The table below summarizes the results of multiple training runs with different 
 | fc2_units              | 128       | 128       | 128       | 128       | 128           |
 | N° of episodes to solve  | 537       | 503       | 611       | 545       | Not Solved    |
 | Average Score          | 13.04     | 13        | 13        | 13.02     | Not Solved    |
+
+
+In the first three experiments, we used a neural network with an architecture of 37 (state_size) x 256 x 156 x 4 (action_size).
+
+Experiment 1: The agent successfully solved the problem in just 537 episodes.
+Experiment 2: We reduced the gamma parameter (which controls how much future rewards are valued). As a result, the agent solved the environment in 503 episodes, a slight improvement compared to the first experiment.
+Experiment 3: The batch size (number of samples drawn from the replay buffer for training) was doubled. With more data to train on, the network took 611 episodes to solve the environment, demonstrating that a larger batch size can sometimes slow convergence.
+Experiment 4: The size of the first hidden layer was reduced to 128, which resulted in the environment being solved in 545 episodes. This showed that it is possible to reduce the network's complexity without significantly affecting its performance.
+Experiment 5: The learning rate was increased to 5e^-3, but the network failed to improve. It stagnated at an average reward of 10.39 and was unable to solve the environment.
+
+This was a very simple analysis of the hyperparameters, providing only a preliminary understanding of their behavior. A more detailed investigation, involving extensive exploration of various hyperparameters, repeated experiments, collection of averages, and hypothesis testing, would be necessary to obtain clearer insights into the impact of hyperparameter tuning.
+
+### Reward Plots During Training Across Four Experiments
+
+Below are the reward plots observed during training for four different experimental setups. These plots illustrate the performance improvements across episodes.
+
+#### Experiment 1
+
+![Experiment 1 Reward Plot](experiment1.png)
+
+#### Experiment 2
+
+![Experiment 2 Reward Plot](experiment2.png)
+
+#### Experiment 3
+
+![Experiment 3 Reward Plot](experiment3.png)
+
+#### Experiment 4
+
+![Experiment 4 Reward Plot](experiment4.png)
+
