@@ -140,6 +140,26 @@ Below are the reward plots observed during training for four different experimen
 #### Experiment 4
 <img src="experiment4.png" alt="Experiment 4" width="425">
 
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+  <div style="flex: 1; max-width: 45%;">
+    <h3>Experiment 1</h3>
+    <img src="experiment1.png" alt="Experiment 1 Reward Plot" style="width: 100%;" />
+  </div>
+  <div style="flex: 1; max-width: 45%;">
+    <h3>Experiment 2</h3>
+    <img src="experiment2.png" alt="Experiment 2 Reward Plot" style="width: 100%;" />
+  </div>
+  <div style="flex: 1; max-width: 45%;">
+    <h3>Experiment 3</h3>
+    <img src="experiment3.png" alt="Experiment 3 Reward Plot" style="width: 100%;" />
+  </div>
+  <div style="flex: 1; max-width: 45%;">
+    <h3>Experiment 4</h3>
+    <img src="experiment4.png" alt="Experiment 4 Reward Plot" style="width: 100%;" />
+  </div>
+</div>
+
 ## Ideas for Future Work
 As suggestions for future work, in addition to a more advanced study of hyperparameters, we propose applying more recent methodologies in Deep Q-Networks (DQNs) to assess potential performance improvements. These could include prioritized replay buffer, double-DQN, or DQN Rainbow. Another possibility is to explore policy gradient methods, such as Proximal Policy Optimization (PPO).
 
