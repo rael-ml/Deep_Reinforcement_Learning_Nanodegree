@@ -131,8 +131,8 @@ Below are the reward plots observed during training for four different experimen
 <img src="experiment2.png" alt="Experiment 2" width="400">
 
 #### Experiment 3
-<img src="experiment3.png" alt="Experiment 3" width="350">
+<img src="experiment3.png" alt="Experiment 3" width="375">
 
 #### Experiment 4
-<img src="experiment4.png" alt="Experiment 4" width="400">
+<img src="experiment4.png" alt="Experiment 4" width="410">
 
